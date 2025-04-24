@@ -1,4 +1,5 @@
 from func import create_task
+from func import show_task
 
 def main():
     while True:
@@ -11,7 +12,7 @@ def main():
             case 2:
                 break
             case 3:
-                break
+                show_task.show_tasks()
             case 4:
                 break
             case 5:
