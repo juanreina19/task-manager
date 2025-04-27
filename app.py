@@ -1,6 +1,7 @@
 from func import create_task
 from func import show_task
 from func import task_completed
+from func import remove_task
 from save import tasks
 
 def main():
@@ -12,7 +13,9 @@ def main():
                 task = str(input("Write the description of your task: "))
                 create_task.create_task(task)
             case 2:
-                break
+                show_task.show_tasks()
+                id = str(input(f'Enter the ID of the task you want to delete: '))
+                remove_task.remove_task(id)
             case 3:
                 show_task.show_tasks()
             case 4:
