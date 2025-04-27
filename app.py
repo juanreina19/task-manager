@@ -1,5 +1,7 @@
 from func import create_task
 from func import show_task
+from func import task_completed
+from save import tasks
 
 def main():
     while True:
@@ -14,7 +16,10 @@ def main():
             case 3:
                 show_task.show_tasks()
             case 4:
-                break
+                if bool(tasks.tasks):
+                    show_task.show_tasks()
+                    id = str(input(f'Enter the ID of the task you want to complete: '))
+                    task_completed.completed_task(id)
             case 5:
                 print(f'\nYou have exited correctly.')
                 return False
